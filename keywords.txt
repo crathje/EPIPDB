@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map for EPIPDB
+# (esp32)
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+EPIPDB	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+handle	KEYWORD2
+request	KEYWORD2
+getBattery1Voltage	KEYWORD2
+getBattery2Voltage	KEYWORD2
+getPanelCurrent	KEYWORD2
+getPanelVoltage	KEYWORD2
+getTemperature	KEYWORD2
+listen	KEYWORD2
+getExternalTemperature	KEYWORD2
+getPWMFrequency	KEYWORD2
+getChargingPriority	KEYWORD2
+getValidAge	KEYWORD2
+print2serial	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

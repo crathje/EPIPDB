@@ -1,0 +1,19 @@
+{
+    "name": "EPIPDB",
+    "authors":
+    [
+		"Claas Anders Rathje"
+    ],
+	"version": "~0.0.1",
+    "keywords": [
+      "solar", "serial", "epsolar"
+    ],
+    "description": "Talk to EPSolar Dual Battery (EPIPDB) solar chargers.",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/crathje/epipdb.git"
+    },
+    "frameworks": "arduino",
+    "platforms": "espressif"
+}
