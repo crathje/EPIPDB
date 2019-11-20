@@ -13,5 +13,6 @@ https://www.epsolarpv.de/produkte/item/mt-1-display.html?category_id=3
 
 ## Schematics
 
-[PDF](extras/inout-eagle-schematic.pdf)
-[Eagle SCH](extras/inout-eagle-schematic.sch)
+[PDF](extras/pinout-eagle-schematic.pdf)
+
+[Eagle SCH](extras/pinout-eagle-schematic.sch)
