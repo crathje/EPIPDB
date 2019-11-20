@@ -2,16 +2,7 @@
    Copyright 2019 Claas Anders Rathje
    Arduino / C++ Library
 
-
-   Bejing EPsolar
-   EPEver EPIPDB-Com 10A 20A Dual Battery Solar RVS/Vessels Controller
-   EPIPDB-COM-10
-   EPIPDB-COM-20
-   https://www.epsolarpv.com/product/64.html
-
-   Display used for data verification
-   https://www.epsolarpv.de/produkte/item/mt-1-display.html?category_id=3
-
+   https://github.com/crathje/EPIPDB
 
    Permission is hereby granted, free of charge, to any person obtaining a copy of this
    software and associated documentation files (the "Software"), to deal in the Software

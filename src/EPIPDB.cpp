@@ -1,4 +1,8 @@
-/* Copyright 2019 Claas Anders Rathje
+/*
+   Copyright 2019 Claas Anders Rathje
+   Arduino / C++ Library
+
+   https://github.com/crathje/EPIPDB
 
    Permission is hereby granted, free of charge, to any person obtaining a copy of this
    software and associated documentation files (the "Software"), to deal in the Software
@@ -136,6 +140,7 @@ void EPIPDB::handle(_ISTREAM &stream)
   }
 }
 
+// sample found here:
 // https://github.com/xxv/tracer/blob/master/docs/Protocol-Tracer-MT-5.pdf
 uint16_t EPIPDB::tracerCRCMatch(uint8_t *CRC_Buff, uint8_t crc_len)
 {
