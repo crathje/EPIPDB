@@ -34,7 +34,6 @@ void EPIPDB::request(_OSTREAM& serial)
   serial.write(_EP_REQUEST_DATA, sizeof(_EP_REQUEST_DATA));
 }
 
-
 float EPIPDB::getBattery1Voltage() {
   return solardata.bat1volt / 100.0;
 }
@@ -84,21 +83,23 @@ void EPIPDB::print2serial(_OSTREAM& serial)
 
 void EPIPDB::handle(uint8_t c)
 {
+  // prevent overflow
   if (ep_buffp >= _EPINBUFFSIZE - 1)
   {
     ep_buffp = 0; // failed
-    memset(ep_buff, 0, _EPINBUFFSIZE);
+    //memset(ep_buff, 0, _EPINBUFFSIZE);
   }
 
+  // save byte
   ep_buff[ep_buffp] = c;
 
+  // check header
   int rc = memcmp(ep_buff, EPIPDB::_EP_DATA_HEADER, ep_buffp > sizeof(EPIPDB::_EP_DATA_HEADER) ? sizeof(EPIPDB::_EP_DATA_HEADER) : ep_buffp);
 
   // still valid package
   if (rc == 0)
   {
-    // ok!
-    //debug2Serial(Serial);
+    // save all bytes till length is reached	  
     if (ep_buffp > 8 && ep_buffp == ((solardata_t*)(ep_buff))->datalen + sizeof(EPIPDB::_EP_DATA_HEADER) + 5) // 8 is the packet length
     {
       if (tracerCRCMatch(ep_buff + sizeof(EPIPDB::_EP_DATA_HEADER), ((solardata_t*)(ep_buff))->datalen + 5) == 0)
@@ -115,11 +116,12 @@ void EPIPDB::handle(uint8_t c)
       }
       else
       {
-        printf("ERROR\n");
+        //printf("ERROR\n");
+		// packet not valid, next is reset anyway
       }
 
       ep_buffp = 0; // done
-      memset(ep_buff, 0, _EPINBUFFSIZE);
+      //memset(ep_buff, 0, _EPINBUFFSIZE);
     }
     else
     {
@@ -129,7 +131,7 @@ void EPIPDB::handle(uint8_t c)
   else
   {
     ep_buffp = 0; // failed
-    memset(ep_buff, 0, _EPINBUFFSIZE);
+    //memset(ep_buff, 0, _EPINBUFFSIZE);
   }
 }
 

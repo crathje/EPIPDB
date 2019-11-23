@@ -455,6 +455,7 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <part name="TO_ESP_RX" library="wirepad" deviceset="SMD2" device=""/>
 <part name="SUPPLY_THROUGH_DIODE" library="wirepad" deviceset="SMD2" device=""/>
 <part name="FRAME1" library="frames" deviceset="A5L-LOC" device=""/>
+<part name="GND" library="wirepad" deviceset="SMD2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -465,8 +466,8 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <attribute name="NAME" x="38.1" y="93.98" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="38.1" y="70.612" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="GND6" gate="1" x="55.88" y="66.04" smashed="yes">
-<attribute name="VALUE" x="53.34" y="63.5" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="55.88" y="63.5" smashed="yes">
+<attribute name="VALUE" x="53.34" y="60.96" size="1.778" layer="96"/>
 </instance>
 <instance part="TO_ESP_TX" gate="1" x="68.58" y="78.74" smashed="yes" rot="R180">
 <attribute name="NAME" x="69.977" y="78.0542" size="1.778" layer="95"/>
@@ -481,6 +482,10 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <attribute name="VALUE" x="69.723" y="94.742" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="GND" gate="1" x="68.58" y="73.66" smashed="yes" rot="R180">
+<attribute name="NAME" x="69.977" y="72.9742" size="1.778" layer="95"/>
+<attribute name="VALUE" x="69.723" y="76.962" size="1.778" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -489,8 +494,11 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <segment>
 <pinref part="EP-CON" gate="G$1" pin="8"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="55.88" y1="68.58" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="73.66" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="GND" gate="1" pin="P"/>
+<junction x="55.88" y="73.66"/>
 <wire x1="55.88" y1="73.66" x2="38.1" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="66.04" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EP_TXD" class="0">
