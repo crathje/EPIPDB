@@ -14,8 +14,7 @@ https://www.epsolarpv.de/produkte/item/mt-1-display.html?category_id=3
 The device is running an ATmega8 as seen on the [top view of the PCB](extras/EPIPDB-Com-20A_PCB_top.jpg).
 
 # Sample
-![EPIPDB-Com running with SSD1306 OLED display](extras/EPIPDB-TTGO-SSD1306-sample_legend.jpg
-?raw=true "EPIPDB-Com running with SSD1306 OLED display")
+![EPIPDB-Com running with SSD1306 OLED display](extras/EPIPDB-TTGO-SSD1306-sample_legend.jpg?raw=true "EPIPDB-Com running with SSD1306 OLED display")
 
 The above picture shows this library running on a TTGO along with a SSD1306 OLED display.
 The source code is provided in [arduinoHardwareSerialAndSSD1306.ino](examples/arduinoHardwareSerialAndSSD1306/arduinoHardwareSerialAndSSD1306.ino).
@@ -30,9 +29,11 @@ I have been running the another instance of this without any level shifter (only
 # Pinout
 
 Client side:
+
 ![EPIPDB-Com RJ45 Pinout](extras/pinout-eagle-schematic_cropped.png?raw=true "EPIPDB-Com RJ45 Pinout")
 
 Client Board (top view!):
+
 ![EPIPDB-Com RJ45 Pinout](extras/pinout-eagle-board_cropped.png?raw=true "EPIPDB-Com RJ45 Pinout")
 
 The most relevant pins would be :
